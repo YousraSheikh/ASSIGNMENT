@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GlaxDU</title>
+	<script src="https://kit.fontawesome.com/f70b73b03d.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<style>
+		:root{--bgcolor: rgb(0,200,0);}
+		.nav{width: 100%; height: 10%;display: flex;background-color: var(--bgcolor);}
+		.nav > div:nth-child(1){width: 80%; height: 100%;}
+		.nav > div:nth-child(1) >ul{display: flex; list-style: none;}
+		.nav > div:nth-child(1) >ul>li:nth-child(2){padding-left: 2%;}
+		.nav > div:nth-child(2){width: 20%; height: 100%; }
+		.nav > div:nth-child(2) >ul{ display: flex;list-style: none; }
+		.nav > div:nth-child(2) >ul >li {padding-left: 5%;}
+		.nav > div:nth-child(2) >ul>li hr{transform: rotate(90degree);height: 100%;width: 1px;background-color: black;bottom: 0;top: 0;}
+		.btn1 {display: none;}
+		.bottom-nav {display: flex; width: 100%; height: 50%;}
+		.bottom-nav > div:nth-child(1){width: 45%; height: 100%;}
+		.bottom-nav > div:nth-child(1) >img{padding: 2% 6%;}
+		.bottom-nav > div:nth-child(2){width: 55%; height: 100%;}
+		.bottom-nav > div:nth-child(2) >ul{display: flex;list-style: none;}
+		.bottom-nav > div:nth-child(2) >ul >li{padding-left: 2%;}
+		.bottom-nav > div:nth-child(2) >ul >li >a {text-decoration: none; color:black;}
+		.btn2{display: none;}
+
+		/*styling of navbar end here*/
+
+		.hero-section {width: 100%; height: 80vh; display: flex;background-color: yellow; background-color: url("image/nn.jpg")}
+		.hero-section >div:nth-child(1){width: 70%; height: 100%;margin-top: 5%; }
+		.hero-section >div:nth-child(1)> span{width: 100%; height: 100%; font-size: 50px; margin-left: 4%;}
+		.hero-section >div:nth-child(1)> p{margin-left: 5%;}
+		.hero-section >div:nth-child(2){width: 30%; height: 100%;}
+		.hero-section >div:nth-child(2)>img{width: 100%; height: 100%;}
+		.button1{padding: 1% 1%; border-radius: 10px; margin-left: 4%; background-color: var(--bgcolor)}
+		.button2{padding: 1% 1%; border-radius: 10px; margin-left: 4%; background-color: var(--bgcolor)}
+		.button1:hover{background-color: white;}
+		.button2:hover{background-color: white;}
+
+				/*styling of hero section end here*/
+
+		.scholarship{ margin: 2% 1%; width: 95%; height: 60%; display: flex; /*background-color: magenta;*/ }
+		.icon {font-size: 50px;}
+		.scholarship > div:nth-child(1) {margin: 1%;width: 23%; height: 100%; background-color: blue;}
+		.scholarship > div:nth-child(2) {margin: 1%;width: 23%; height: 100%; background-color: red;}
+		.scholarship > div:nth-child(3) {margin: 1%;width:23%;height: 100%; background-color: green;}
+		.scholarship > div:nth-child(4) {margin: 1%;width: 23%; height: 100%; background-color: skyblue;}
+		
+		.courses{height: 30%; width: 100%;   }
+		.courses > h1{height: 10%;margin-left: 7%; }
+		.courses > div {height: 100%; width: 40%; margin-left: 7%; }
+		.course-pic {width: 100%;   height: 30%;  display: flex; margin: 0.5%;}
+		.course-pic > div:nth-child(1) {width: 25%; height: 100%; }
+		.course-pic > div:nth-child(2) {width: 25%; height: 100%; }
+		.course-pic > div:nth-child(3) {width: 25%; height: 100%; }
+		.course-pic > div:nth-child(4) {width: 25%; height: 100%; }
+
+		.footer{display: flex; background-color: var(--bgcolor);}
+		.footer >div {margin: 2%;}
+		.footer >div > ul {list-style: none;}
+		.footer > div >ul > li > a {text-decoration: none; color: black;}
+		.footer > div >ul > li > h1 {border-bottom: solid;}
+		@media screen AND (max-width: 800px){
+			.nav > div:nth-child(2)>ul{display: none;}
+			.btn1{display: block; padding: 2%;}
+			.btn1 :hover > .nav >div:nth-child(2) >ul{display: flex;flex-direction: column;}
+
+			.bottom-nav >div:nth-child(2)>ul{display: none;}
+			.btn2{display: block; padding: 2%; float: right;}
+			.btn2 :hover { border-color: red; }
+			.hero-section >div:nth-child(2)>img{display: none;}
+			.hero-section > div:nth-child(1) {margin-left: 10%;} 
+
+			.course-pic  {display: flex; flex-direction: column; margin-left: 1%;}
+
+			.scholarship {display:none;}
+
+			.footer{display: flex; flex-direction: column;}
+			.footer > div >ul > li > h1{border: none;}
+
+		}
+	</style>
+
+	<div class="nav">
+		<div>
+			<ul>
+				<li><i class="fa-solid fa-phone"></i>+92 558 547 589</li>
+				<li><i class="fa-solid fa-envelope"></i>edu@gmail.com</li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li>Login</li>
+				<li><hr></li>
+				<li>Register</li>
+			</ul>
+			<button class="btn1">View more</button> 
+		</div>      <!-- child 2 closing div -->
+	</div>     <!-- nav bar closing div -->
+	<div class="bottom-nav">
+		<div>
+			<img src="image/logo.webp" alt="Error">
+		</div>    <!--  closing of chid 1  -->
+		<div>
+			<ul>
+				<li><a href="Home.html">HOME</a></li>
+				<li><a href="About.html">ABOUT</a></li>
+				<li><a href="Pages.html">PAGES<i class="fa-solid fa-caret-down"></i></a></li>
+				<li><a href="Courses.html">COURSES/PROGRAMMES</a></li>
+				<li><a href="Blogs.html">BLOG</a></li>
+				<li><a href="Contact-us.html">CONTACT</a></li>
+				<li><i class="fa-solid fa-magnifying-glass"></i></li>
+			</ul>
+			<button class="btn2">Show details</button>
+		</div>   <!-- child 2 closing div -->
+	</div>  <!--  closing of bottom-nav --> 
+	<hr>
+	<div class="hero-section"> <!-- <img src="image/nn.jpg" alt="Error" style="width: 100%; height: 20%;"> -->
+		<div>
+			<span>	WELCOME TO THE NEW WORLD</span><br><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</p>
+			<button class="button1">About Us</button>
+			<button class="button2">Contact Us</button>
+		</div>   <!-- text div  -->
+		<div>
+			 <img src="image/girl.png">
+		</div>   <!--  pic div -->
+	</div>   <!-- hero-section div closing -->
+
+	<div class="scholarship">
+		<div>
+			<center><i class="fa-solid fa-user-graduate icon"></i><h1>scholarship</h1><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. </span></center>
+		</div>
+		<div>
+			<center><i class="fa-solid fa-user-graduate icon"></i><h1>scholarship</h1><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. </span></center>
+		</div>
+		<div>
+			<center><i class="fa-solid fa-user-graduate icon"></i><h1>scholarship</h1><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. </span></center>
+		</div>
+		<div>
+			<center><i class="fa-solid fa-user-graduate icon"></i><h1>scholarship</h1><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. </span></center>
+		</div>
+	</div>    <!-- scholarship div closing -->
+	<div class="courses">
+			<h1>OUR COURSES</h1>
+			<div>
+			<span> Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></div>
+		</div>    <!-- courses -->
+		<div class="course-pic">
+			 	<div>
+					<img src="image/course-1.jpg" alt="Error"><br>
+					<span><b>APPAREL MANUFACTURING</b><br>Consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. <br> Duration: 1year</span>
+				</div>
+			 	<div>
+					<img src="image/course-2.jpg" alt="Error"><br>
+					<span><b>GRAPHIC DESIGNING</b><br>Consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. <br> Duration: 1year</span>
+				</div>
+				<div>
+					<img src="image/course-3.jpg" alt="Error"><br>
+					<span><b>COMPUTER ENGINEERING</b><br>Consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. <br> Duration: 1year</span>
+				</div>
+				<div>
+					<img src="image/course-4.jpg" alt="Error"><br>
+					<span><b>FASION & TECHNOLOGY</b><br>Consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. <br> Duration: 1year</span>
+				</div>
+			
+		   
+		</div>     <!-- course pic -->
+
+
+		<div class="footer">
+			<div>
+				<ul>
+					<li><h1>About Us</h1></li>
+					<li>Uttara, Dhaka,Bagladesh</li>
+					<li><i class="fa-solid fa-phone"></i>+92 558 547 589</li>
+					<li><i class="fa-solid fa-envelope"></i>edu@gmail.com</li>
+					
+				</ul>
+			</div>      <!-- footer div-1 close -->
+			<div>
+				<ul>
+					<li><h1>Quick link</h1></li>
+					<li><a href="Home.html">HOME</a></li>
+					<li><a href="About.html">ABOUT</a></li>
+					<li><a href="Pages.html">PAGES</a></li>
+					<li><a href="Terms and condition">Term & Condition</a></li>
+				</ul>
+			</div>    <!-- footer div-2 end -->
+			<div>
+				<ul>
+					<li><h1>Courses</h1></li>
+					<li>Under Graduate</li>
+					<li>Diploma Courses</li>
+					<li>Short Courses</li>
+					<li>Other Programes</li>
+				</ul>
+			</div>      <!-- footer div-3 close -->
+
+			<div>
+				<ul>
+					<li><h1>Register Yourself</h1></li>
+					<li><input type="text" name="name" placeholder="User Name"></li><br>
+					<li><input type="password" name="password" placeholder="password"></li><br>
+					<li><button>Submit</button></li>
+				</ul>
+			</div>
+			<div>
+				<ul>
+					<li><h1>News Later</h1></li>
+					<li><input type="email" name="email" placeholder="E-mail"></li><br>
+					<li><button>Submit</button></li>
+				</ul>
+			</div>
+
+
+		</div>    <!-- footer div close -->
+
+</body>
+</html>
