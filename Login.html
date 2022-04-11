@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<script src="https://kit.fontawesome.com/f70b73b03d.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<style>
+		
+		:root{--bgcolor: rgb(0,200,0);}
+		
+		.nav{width: 100%; height: 10%;display: flex;background-color: var(--bgcolor);}
+		.nav > div:nth-child(1){width: 80%; height: 100%;}
+		.nav > div:nth-child(1) >ul{display: flex; list-style: none;}
+		.nav > div:nth-child(1) >ul>li:nth-child(2){padding-left: 2%;}
+		.nav > div:nth-child(2){width: 20%; height: 100%; }
+		.nav > div:nth-child(2) >ul{ display: flex;list-style: none; }
+		.nav > div:nth-child(2) >ul >li {padding-left: 5%;}
+		.nav > div:nth-child(2) >ul>li hr{transform: rotate(90degree);height: 100%;width: 1px;background-color: black;bottom: 0;top: 0;}
+		.btn1 {display: none;}
+
+		.bottom-nav {display: flex; width: 100%; height: 50%;}
+
+		.bottom-nav > div:nth-child(1){width: 45%; height: 100%;}
+		.bottom-nav > div:nth-child(1) >img{padding: 2% 6%;}
+		.bottom-nav > div:nth-child(2){width: 55%; height: 100%;}
+		.bottom-nav > div:nth-child(2) >ul{display: flex;list-style: none;}
+		.bottom-nav > div:nth-child(2) >ul >li{padding-left: 2%; margin-left: 2%;}
+		.bottom-nav > div:nth-child(2) >ul >li >a {text-decoration: none; color:black;}
+		.btn2{display: none;}
+
+		/*styling of navbar end here*/
+
+
+		.hero {width: 100%; height: 70vh; background-image: url(image/nn.jpg); display: flex; background-color: var(--bgcolor); /*background-repeat: no-repeat!important;*/ opacity: 0.9;}
+		.hero > div:nth-child(1) {width: 60%; height: 100vh;}
+		.hero > div:nth-child(2) {width: 30%; height: 60vh; border-radius: 10px; border: solid; margin: 3%; /*color: white*/; font-size: 20px;}
+		.hero > div:nth-child(2) > input {padding: 3%;}
+
+		*//*.slider{width: 100%; height: 40%; position: absolute; animation: slider 5s infinite linear}
+		@keyframes slider{
+			0% {background-image: url(image/course-2.png); background-repeat: no-repeat!important;}
+			25% {background-image: url(image/course-3.png); background-repeat: no-repeat!important;}
+			50% {background-image: url(image/course-1.png); background-repeat: no-repeat!important;}
+			75% {background-image: url(image/gallery-4.png); background-repeat: no-repeat!important;}
+			100% {background-image: url(image/course-4.jpg); background-repeat: no-repeat!important;}
+		*/}
+		
+
+		.footer {display: flex; background-color: var(--bgcolor);}
+		.footer >div {margin: 2%;}
+		.footer >div > ul {list-style: none;}
+		.footer > div >ul > li > a {text-decoration: none; color: black;}
+		.footer > div >ul > li > h1 {border-bottom: solid;}
+		
+
+		/*.footer {background-color: var(--bgcolor);}
+		.footer >div {margin: 2%;}
+		.footer >div > ul {list-style: none;}
+		.footer > div >ul > li > a {text-decoration: none; color: black;}
+		.footer > div >ul > li > h1 {border-bottom: solid;}
+		*/      /*footer styling*/
+
+		@media screen AND (max-width: 800px){
+			.nav > div:nth-child(2)>ul{display: none;}
+			.btn1{display: block; margin: 15% 5%;}
+			.btn1 :hover > .nav >div:nth-child(2) {display: flex;flex-direction: column;}
+						/*.btn1:hover {background-color: green;}*/
+			.bottom-nav >div:nth-child(2)>ul{display: none;}
+			.btn2{display: block; float: right;margin: 5% 2%;}
+			.btn2 :hover { border-color: red; }
+
+			.hero > div:nth-child(2) {width: 40%; height: 50vh; border-radius: 10px; border: solid; margin: 10%; color: white; font-size: 30px;}
+
+			.footer{display: flex; flex-direction: column;}
+			.footer > div >ul > li > h1{border: none;}
+
+		}
+
+	</style>
+	<div class="nav">
+		<div>
+			<ul>
+				<li><i class="fa-solid fa-phone"></i>+92 558 547 589</li>
+				<li><i class="fa-solid fa-envelope"></i>edu@gmail.com</li>
+			</ul>
+		</div>
+
+		<div>
+			<ul>
+				<li>Login</li>
+				<li><hr></li>
+				<li>Register</li>
+			</ul>
+			<button class="btn1">View more</button>
+		</div>      <!-- child 2 closing div -->
+	</div>     <!-- nav bar closing div -->
+
+
+	<div class="bottom-nav">
+		<div>
+			<img src="image/logo.webp" alt="Error">
+		</div>    <!--  closing of chid 1  -->
+		<div>
+			<ul>
+				<li><a href="Home.html">HOME</a></li>
+				<li><a href="About.html">ABOUT</a></li>
+				<li><a href="Pages.html">PAGES<i class="fa-solid fa-caret-down"></i></a></li>
+				<li><a href="Courses.html">COURSES/PROGRAMMES</a></li>
+				<li><a href="Blogs.html">BLOG</a></li>
+				<li><a href="Contact-us.html">CONTACT</a></li>
+				<li><i class="fa-solid fa-magnifying-glass"></i></li>
+			</ul>
+			<button class="btn2">Show details</button>
+		</div>   <!-- child 2 closing div -->
+	</div>  <!--  closing of bottom-nav --> 
+	<hr>
+
+	 <div class="hero">
+	 	<div>
+	 		
+	 	</div>    <!-- nth-child(1) div -->
+	 	<div><center>
+	 		<h1>Login </h1>
+	 		<label>E-mail</label><br>
+	 		<input type="email" name="email" placeholder="E-mail"><br><br>
+	 		<label>Password</label><br>
+	 		<input type="password" name="password" placeholder="Enter Password">
+	 		<p><a href="Registeration.html">Forget Password?</a></p>
+	 	</center>
+	 	</div>    <!-- nth-child(2) div -->
+	 </div>     <!-- hero closing div -->
+	<!-- 	<div>
+			<h1>About Us</h1>
+			<span> Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+		</div>
+		<div></div>
+ -->
+	 	 <!-- bgpic closing div -->
+
+
+
+	 <div class="footer">
+			<div>
+				<ul>
+					<li><h1>About Us</h1></li>
+					<li>Uttara, Dhaka,Bagladesh</li>
+					<li><i class="fa-solid fa-phone"></i>+92 558 547 589</li>
+					<li><i class="fa-solid fa-envelope"></i>edu@gmail.com</li>
+					
+				</ul>
+			</div>      <!-- footer div-1 close -->
+			<div>
+				<ul>
+					<li><h1>Quick link</h1></li>
+					<li><a href="Home.html">HOME</a></li>
+					<li><a href="About.html">ABOUT</a></li>
+					<li><a href="Pages.html">PAGES</a></li>
+					<li><a href="Terms and condition">Term & Condition</a></li>
+				</ul>
+			</div>    <!-- footer div-2 end -->
+			<div>
+				<ul>
+					<li><h1>Courses</h1></li>
+					<li>Under Graduate</li>
+					<li>Diploma Courses</li>
+					<li>Short Courses</li>
+					<li>Other Programes</li>
+				</ul>
+			</div>      <!-- footer div-3 close -->
+
+ 			<div>
+				<ul>
+					<li><h1>Register Yourself</h1></li>
+					<li><input type="text" name="name" placeholder="User Name"></li><br>
+					<li><input type="password" name="password" placeholder="password"></li><br>
+					<li><button>Submit</button></li>
+				</ul>
+			</div>      <!--  footer div-4 close -->
+			<div>
+				<ul>
+					<li><h1>News Later</h1></li>
+					<li><input type="email" name="email" placeholder="E-mail"></li><br>
+					<li><button>Submit</button></li>
+				</ul>
+			</div>  <!-- footer div-5 close -->
+
+
+ 		</div>   <!-- footer div close -->
+ 
+	
+	</body>
+	</html>

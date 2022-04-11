@@ -7,6 +7,7 @@
 </head>
 <body>
 	<style>
+		
 		:root{--bgcolor: rgb(0,200,0);}
 		.nav{width: 100%; height: 10%;display: flex;background-color: var(--bgcolor);}
 		.nav > div:nth-child(1){width: 80%; height: 100%;}
@@ -15,7 +16,7 @@
 		.nav > div:nth-child(2){width: 20%; height: 100%; }
 		.nav > div:nth-child(2) >ul{ display: flex;list-style: none; }
 		.nav > div:nth-child(2) >ul >li {padding-left: 5%;}
-		.nav > div:nth-child(2) >ul>li hr{transform: rotate(90degree);height: 100%;width: 1px;background-color: black;bottom: 0;top: 0;}
+		/*.nav > div:nth-child(2) >ul>li hr{transform: rotate(90degree);height: 100%;width: 1px;background-color: black;bottom: 0;top: 0;}*/
 		.btn1 {display: none;}
 		.bottom-nav {display: flex; width: 100%; height: 50%;}
 		.bottom-nav > div:nth-child(1){width: 45%; height: 100%;}
@@ -28,7 +29,7 @@
 
 		/*styling of navbar end here*/
 
-		.hero-section {width: 100%; height: 80vh; display: flex;background-color: yellow; background-color: url("image/nn.jpg")}
+		.hero-section {width: 100%; height: 80vh; display: flex;background-color: yellow;/* background-color: url("image/nn.jpg")*/}
 		.hero-section >div:nth-child(1){width: 70%; height: 100%;margin-top: 5%; }
 		.hero-section >div:nth-child(1)> span{width: 100%; height: 100%; font-size: 50px; margin-left: 4%;}
 		.hero-section >div:nth-child(1)> p{margin-left: 5%;}
@@ -64,25 +65,28 @@
 		.footer > div >ul > li > h1 {border-bottom: solid;}
 		@media screen AND (max-width: 800px){
 			.nav > div:nth-child(2)>ul{display: none;}
-			.btn1{display: block; padding: 2%;}
-			.btn1 :hover > .nav >div:nth-child(2) >ul{display: flex;flex-direction: column;}
-
+			.btn1{display: block; margin: 15% 5%;}
+			.btn1 :hover > .nav >div:nth-child(2) {display: flex;flex-direction: column;}
+						/*.btn1:hover {background-color: green;}*/
 			.bottom-nav >div:nth-child(2)>ul{display: none;}
-			.btn2{display: block; padding: 2%; float: right;}
+			.btn2{display: block; float: right;margin: 5% 2%;}
 			.btn2 :hover { border-color: red; }
 			.hero-section >div:nth-child(2)>img{display: none;}
 			.hero-section > div:nth-child(1) {margin-left: 10%;} 
 
 			.course-pic  {display: flex; flex-direction: column; margin-left: 1%;}
 
-			.scholarship {display:none;}
-
+			.scholarship {display:inline-flex; flex-direction: column;}
+			.scholarship > div:nth-child(1) {width: 100%;}
+			.scholarship > div:nth-child(2){width: 100%;}
+			.scholarship > div:nth-child(3) {width: 100%;}
+			.scholarship > div:nth-child(4){width:100%;}
 			.footer{display: flex; flex-direction: column;}
 			.footer > div >ul > li > h1{border: none;}
 
 		}
 	</style>
-
+	
 	<div class="nav">
 		<div>
 			<ul>
@@ -90,13 +94,12 @@
 				<li><i class="fa-solid fa-envelope"></i>edu@gmail.com</li>
 			</ul>
 		</div>
+
 		<div>
 			<ul>
-				<li>Login</li>
-				<li><hr></li>
-				<li>Register</li>
+				<li>Login/Register</li>
 			</ul>
-			<button class="btn1">View more</button> 
+			<button class="btn1">View more</button>
 		</div>      <!-- child 2 closing div -->
 	</div>     <!-- nav bar closing div -->
 	<div class="bottom-nav">
