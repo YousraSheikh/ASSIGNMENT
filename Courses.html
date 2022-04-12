@@ -1,16 +1,13 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>GlaxDU</title>
+	<title>Courses/Programes</title>
 	<script src="https://kit.fontawesome.com/f70b73b03d.js" crossorigin="anonymous"></script>
-	
 
 </head>
 <body>
 	<style>
-		/**{
-			margin: 0; padding: 0; 
-		}*/
 		:root{--bgcolor: rgb(0,200,0);}
 		.wrapper{width: 100%; height: 100%; overflow: hidden;}
 		.nav{width: 100%; height: 10vh;display: flex;background-color: var(--bgcolor);}
@@ -39,38 +36,24 @@
 
 		/*styling of navbar end here*/
 
-		
-		.hero-section {width: 100%; height: 70vh; display: flex; background-color: green; position: relative;}
-		.pic-1 {background-image: url(image/bgi.jpg); background-repeat: no-repeat!important; background-size: cover; width: 100%; height: 100%; opacity: 0.5;}
-		.pic-2{width: 30%; height: 100%; position: absolute;}
-		.pic-2 >img {width: 100%; height: 100%;}
-		.text {width: 70%; height: 100%; position: absolute;}
-		.text > h1 {color:white;}
-		.text > h2{color:white;}
+		.hero-section {width: 100%; height: 40vh;  background-color: rgb(40,40,40);  display: flex;position: relative;}
+		.hero-section > div:nth-child(1) {background-image: url(image/book.jpg); background-size: cover; background-repeat: no-repeat; width: 100%; height: 100%; opacity: 0.5; position: absolute;}
+		.hero-section > div:nth-child(2) {width: 40%; height: 100%; margin: 2%; position: absolute; }
+		.hero-section > div:nth-child(2) > h1 {color: white;}
+		.hero-section > div:nth-child(2) > span{ color: white; font-size: 23px; }
+
+		.border{width: 100%; height: 7vh; background-color: var(--bgcolor); display: flex;}
+		.border > div:nth-child(1) {width: 85%; height: 100%; margin: 0.5% 5%; font-size: 25px;}	
+		.border > div:nth-child(1) > a {text-decoration: none; color: black; }
+		.border > div:nth-child(2) {width: 15%; height: 100%;  font-size: 20px; margin: 0.5%;}		
 
 
-
-		.button1{padding: 1% 1%; border-radius: 10px; margin-left: 4%; background-color: var(--bgcolor)}
-		.button2{padding: 1% 1%; border-radius: 10px; margin-left: 4%; background-color: var(--bgcolor)}
-		.button1:hover{background-color: white;}
-		.button2:hover{background-color: white;}
-
-			/*styling of hero section end here
-
-		.scholarship{ margin: 2% 1%; width: 95%; height: 60%; display: flex; /*background-color: magenta;*/ }
-		.icon {font-size: 50px;}
-		.scholarship > div:nth-child(1) {margin: 1%;width: 23%; height: 100%; background-color: blue;}
-		.scholarship > div:nth-child(2) {margin: 1%;width: 23%; height: 100%; background-color: red;}
-		.scholarship > div:nth-child(3) {margin: 1%;width:23%;height: 100%; background-color: green;}
-		.scholarship > div:nth-child(4) {margin: 1%;width: 23%; height: 100%; background-color: skyblue;}
-		
 		.courses{height: 30%; width: 100%;   }
 		.courses > h1{height: 10%;margin-left: 7%; }
 		.courses > div {height: 100%; width: 40%; margin-left: 7%; }
 		.course-pic {width: 100%;   height: 30%;  display: flex; margin: 0.5%;}
-		.course-pic > div/*:nth-child(1)*/ {width: 24%; height: 100%; border: solid; margin-left: 0.5%; }
+		.course-pic > div {width: 24%; height: 100%; border: solid; margin-left: 0.5%; }
 
-		
 		.footer{display: flex; background-color: var(--bgcolor);}
 		.footer >div {margin: 0.5%;}
 		.footer >div > ul {list-style: none;}
@@ -78,6 +61,10 @@
 		.footer > div >ul > li > h1 {border-bottom: solid;}
 /*		.footer > div >ul > li > i {font-size: 30px;  border: solid;}
 		*/.icon {float: right ; border: solid; border-radius: 70px; font-size: 25px;}
+		
+		
+		
+
 
 		@media screen AND (max-width: 800px){
 			.nav > div:nth-child(2)>ul{margin-left: -20%;}
@@ -87,118 +74,100 @@
 			.bottom-nav >div:nth-child(2)>ul{display: none;}
 			.btn2{display: block; float: right;margin: 5% 2%;}
 			.btn2 :hover { border-color: red; }
-			.hero-section >div:nth-child(2)>img{display: none;}
-			.hero-section > div:nth-child(1) {margin-left: 10%;} 
+
+			.border > div:nth-child(2) {margin: 0;}
 
 			.course-pic  {display: flex; flex-direction: column; margin-left: 1%;}
 
-			.scholarship {display:inline-flex; flex-direction: column;}
-			.scholarship > div:nth-child(1) {width: 100%;}
-			.scholarship > div:nth-child(2){width: 100%;}
-			.scholarship > div:nth-child(3) {width: 100%;}
-			.scholarship > div:nth-child(4){width:100%;}
+			
+
 			.footer{display: flex; flex-direction: column;}
 			.footer > div >ul > li > h1{border: none;}
 
-			.footer-2 {}
-		}
+
 	</style>
 	<div class="wrapper">
-	<div class="nav" id="navbar">
-		<div>
-			<ul>
-				<li><i class="fa-solid fa-phone"></i>+92 558 547 589</li>
-				<li><i class="fa-solid fa-envelope"></i>edu@gmail.com</li>
-			</ul>
-		</div>
+		<div class="nav" id="navbar">
+			<div>
+				<ul>
+					<li><i class="fa-solid fa-phone"></i>+92 558 547 589</li>
+					<li><i class="fa-solid fa-envelope"></i>edu@gmail.com</li>
+				</ul>
+			</div>
 
-		<div>
-			<ul>
-				<li><a href="Login.html">Login</a></li>
-				<li><a href="Registeration.html">Registration</a></li>
-			</ul>
-<!-- 			<button class="btn1">View more</button> -->
-		</div>      <!-- child 2 closing div -->
-	</div>     <!-- nav bar closing div -->
-	<div class="bottom-nav">
-		<div>
-			<img src="image/logo.webp" alt="Error">
-		</div>    <!--  closing of chid 1  -->
-		<div class="bottom-nav2">
-			<ul>
-				<li><a href="GlaxDU.html">HOME</a><i class="fa-solid fa-caret-down"></i>
-					<ul>
-						<li>Home 1</li>
-						<li>Home 2</li>
-					</ul>
-				</li>
-				<li><a href="About-Us.html">ABOUT</a><i class="fa-solid fa-caret-down"></i>
-					<ul>
-						<li>About 1 </li>
-						<li>About 2 </li>
-					</ul>
-				</li>
-				<li><a href="Pages.html">PAGES</a><i class="fa-solid fa-caret-down"></i>
-					<ul>
-						<li>Course Page</li>
-						<li>Event Page</li>
-						<li>Course Detail</li>
-						<li>Event Detail</li>
-						<li>Login</li>
-					</ul>
-
-				</li>
-				<li><a href="Courses.html">COURSES/PROGRAMMES</a><i class="fa-solid fa-caret-down"></i>
-					<ul>
-						<li>Apperal Manufacturing</li>
-						<li>Graphic Designing</li>
-						<li>Fashion & Technology</li>
-						<li>Computer Engineering</li>
-					</ul>
-				</li>
-				<li>BLOG
-					<ul>
-						<li>Blog</li>
-						<li>Blog Detail</li>
-					</ul>
-				</li>
-				<li>CONTACT</li>
-				<li><i class="fa-solid fa-magnifying-glass"></i></li>
-			</ul>
-			<button class="btn2">Show details</button>
-		</div>   <!-- child 2 closing div -->
-	</div>  <!--  closing of bottom-nav --> 
-	<hr>
+			<div>
+				<ul>
+					<li><a href="Login.html">Login</a></li>
+					<li><a href="Registeration.html">Registration</a></li>
+				</ul>
+			</div>      <!-- child 2 closing div -->
+		</div>     <!-- nav bar closing div -->
+		<div class="bottom-nav">
+			<div>
+				<img src="image/logo.webp" alt="Error">
+			</div>    <!--  closing of chid 1  -->
+			<div class="bottom-nav2">
+				<ul>
+					<li><a href="GlaxDU.html">HOME</a><i class="fa-solid fa-caret-down"></i>
+						<ul>
+							<li>Home 1</li>
+							<li>Home 2</li>
+						</ul>
+					</li>
+					<li><a href="About-Us.html">ABOUT</a><i class="fa-solid fa-caret-down"></i>
+						<ul>
+							<li>About 1 </li>
+							<li>About 2 </li>
+						</ul>
+					</li>
+					<li>PAGES<i class="fa-solid fa-caret-down"></i>
+						<ul>
+							<li>Course Page</li>
+							<li>Event Page</li>
+							<li>Course Detail</li>
+							<li>Event Detail</li>
+							<li>Login</li>
+						</ul>
+					</li>
+					<li><a href="Courses.html">COURSES/PROGRAMMES</a><i class="fa-solid fa-caret-down"></i>
+						<ul>
+							<li>Apperal Manufacturing</li>
+							<li>Graphic Designing</li>
+							<li>Fashion & Technology</li>
+							<li>Computer Engineering</li>
+						</ul>
+					</li>
+					<li>BLOG
+						<ul>
+							<li>Blog</li>
+							<li>Blog Detail</li>
+						</ul>
+					</li>
+					<li>CONTACT
+					</li>
+					<li><i class="fa-solid fa-magnifying-glass"></i>
+					</li>
+				</ul>
+				<button class="btn2">Show details</button>
+			</div>   <!-- child 2 closing div -->
+		</div>  <!--  closing of bottom-nav --> 
+		<hr>
+		<div class="hero-section">
+			<div></div>
+			<div>
+				<h1>Contact Us</h1>
+				<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. </span>
+			</div>
 	
-	<div class="hero-section"><div class="pic-1"></div>
-		<div class="pic-2"><img src="image/girl.png"></div>
-		<div class="text">
-			<h1>WELCOME TO THE NEW WORLD</h1>
-			
-		</div>
-	
-	</div>
+		</div>    <!-- hero-section div -->
 
+		<div class="border">
+			<div><a href="GlaxDU.html"><b>Home</b></a></div>
+			<div><b>Course Grid</b></div>
+		</div>   <!-- border div -->
 
-	<div class="scholarship">
-		<div>
-			<center><i class="fa-solid fa-user-graduate icon"></i><h1>scholarship</h1><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. </span></center>
-		</div>
-		<div>
-			<center><i class="fa-solid fa-user-graduate icon"></i><h1>scholarship</h1><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. </span></center>
-		</div>
-		<div>
-			<center><i class="fa-solid fa-user-graduate icon"></i><h1>scholarship</h1><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. </span></center>
-		</div>
-		<div>
-			<center><i class="fa-solid fa-user-graduate icon"></i><h1>scholarship</h1><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. </span></center>
-		</div>
-	</div>    <!-- scholarship div closing -->
-	<div class="courses">
+		<div class="courses">
 			<h1>OUR COURSES</h1>
 			<div>
 			<span> Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -229,7 +198,6 @@
 			
 		   
 		</div>     <!-- course pic -->
-
 
 		<div class="footer">
 			<div>
@@ -287,7 +255,9 @@
  
 
 		</div>    <!-- footer div close -->
-		
-</div>     <!-- wrapper div -->
+
+
+
+	</div>    <!-- WRAPPER DIV -->
 </body>
 </html>

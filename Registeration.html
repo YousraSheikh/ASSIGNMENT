@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>Registration Form</title>
 	<script src="https://kit.fontawesome.com/f70b73b03d.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
+
 	<style>
-		
 		:root{--bgcolor: rgb(0,200,0);}
-		
 		.nav{width: 100%; height: 10%;display: flex;background-color: var(--bgcolor);}
 		.nav > div:nth-child(1){width: 80%; height: 100%;}
 		.nav > div:nth-child(1) >ul{display: flex; list-style: none;}
 		.nav > div:nth-child(1) >ul>li:nth-child(2){padding-left: 2%;}
 		.nav > div:nth-child(2){width: 20%; height: 100%; }
 		.nav > div:nth-child(2) >ul{ display: flex;list-style: none; }
-		.nav > div:nth-child(2) >ul >li {padding-left: 5%;}
-		.nav > div:nth-child(2) >ul>li hr{transform: rotate(90degree);height: 100%;width: 1px;background-color: black;bottom: 0;top: 0;}
+		/*.nav > div:nth-child(2) >ul >li {padding-left: 5%;}*/
+		.nav > div:nth-child(2) >ul >li >a  {/*padding-left: 5%;*/ text-decoration: none; color: black;}
+		/*.nav > div:nth-child(2) >ul>li hr{transform: rotate(90degree);height: 100%;width: 1px;background-color: black;bottom: 0;top: 0;}*/
 		.btn1 {display: none;}
-
 		.bottom-nav {display: flex; width: 100%; height: 50%;}
-
 		.bottom-nav > div:nth-child(1){width: 45%; height: 100%;}
 		.bottom-nav > div:nth-child(1) >img{padding: 2% 6%;}
 		.bottom-nav > div:nth-child(2){width: 55%; height: 100%;}
 		.bottom-nav > div:nth-child(2) >ul{display: flex;list-style: none;}
-		.bottom-nav > div:nth-child(2) >ul >li{padding-left: 2%; margin-left: 2%;}
+		.bottom-nav > div:nth-child(2) >ul >li{padding-left: 2%;}
 		.bottom-nav > div:nth-child(2) >ul >li >a {text-decoration: none; color:black;}
 		.btn2{display: none;}
 
 		/*styling of navbar end here*/
+		.z-div {width: 100%; height: 100%; }
+		.z-div > h1{margin-left: 2%; width: 100%; height: 10%; }
+		.p-div {width: 100%; height: 100%; display: flex; background-image: url(image/nn-1.jpg); background-size: cover; background-repeat: no-repeat!important; }
+		.p-div > div:nth-child(1) {height: 90%; width: 50%; /*background-color: yellow; border: solid;*/ margin: 0.5%;}
+		.p-div > div:nth-child(1) >label {margin: 2% 3%; font-size: 20px;}
+		.p-div > div:nth-child(1) >input {margin: 2% 3%; }
 
-
-		.hero {width: 100%; height: 80%; background-image: url(image/nn-1.jpg); display: flex; background-color: var(--bgcolor); background-repeat: no-repeat!important; opacity: 0.9; background-size: cover;}
-		.hero > div:nth-child(1) {width: 60%; height: 100vh;}
-		.hero > div:nth-child(2) {width: 30%; height: 60vh; border-radius: 10px; border: solid; margin: 5%; /*color: white*/; font-size: 20px;}
-		.hero > div:nth-child(2) > input {padding: 3%;}
+		.p-div > div:nth-child(2) {height: 90%; width: 50%; /*background-color: blue; border: solid;*/ margin: 0.5% 0% 0.5% 2%;}
+		.p-div > div:nth-child(2) >label {margin: 2%; font-size: 20px; }
+		.p-div > div:nth-child(2) >input {margin: 2%;}
+		.p-div > div:nth-child(2) > select {margin: 2%;}
+		.p-div > div:nth-child(2) > button {margin: 2%;}
 
 		.footer{display: flex; background-color: var(--bgcolor); margin-top: 1%;}
 		.footer >div {margin: 2%;}
@@ -44,7 +48,8 @@
 		.footer > div >ul > li > a {text-decoration: none; color: black;}
 		.footer > div >ul > li > h1 {border-bottom: solid;}
 		
-		
+
+
 		@media screen AND (max-width: 800px){
 			.nav > div:nth-child(2)>ul{display: none;}
 			.btn1{display: block; margin: 15% 5%;}
@@ -54,14 +59,17 @@
 			.btn2{display: block; float: right;margin: 5% 2%;}
 			.btn2 :hover { border-color: red; }
 
-			.hero > div:nth-child(2) {width: 40%; height: 50vh; border-radius: 10px; border: solid; margin: 10%; color: white; font-size: 20px;}
-
+			
 			.footer{display: flex; flex-direction: column;}
 			.footer > div >ul > li > h1{border: none;}
 
 		}
 
+
+
+
 	</style>
+
 	<div class="nav">
 		<div>
 			<ul>
@@ -72,13 +80,11 @@
 
 		<div>
 			<ul>
-				<li><a href="Login.html">Login/Register</a></li>
-				</ul>
+				<li>Login/Register</li>
+			</ul>
 			<button class="btn1">View more</button>
 		</div>      <!-- child 2 closing div -->
 	</div>     <!-- nav bar closing div -->
-
-
 	<div class="bottom-nav">
 		<div>
 			<img src="image/logo.webp" alt="Error">
@@ -98,22 +104,68 @@
 	</div>  <!--  closing of bottom-nav --> 
 	<hr>
 
-	 <div class="hero">
-	 	<div>
-	 		
-	 	</div>    <!-- nth-child(1) div -->
-	 	<div><center>
-	 		<h1>Login </h1>
-	 		<label>E-mail</label><br>
-	 		<input type="email" name="email" placeholder="E-mail"><br><br>
-	 		<label>Password</label><br>
-	 		<input type="password" name="password" placeholder="Enter Password">
-	 		<p><a href="Registeration.html">Forget Password?</a></p>
-	 	</center>
-	 	</div>    <!-- nth-child(2) div -->
-	 </div>     <!-- hero closing div -->
+	<div class="z-div">
+	<h1>Registration Form</h1>
+	<div class="p-div">
 	
-	<div class="footer">
+		
+		
+	<div>
+		<label><b>Candidate Name</b></label><br>
+		<input type="text" placeholder="Enter your name" name="student name"required><br><br>
+		<label><b>Father Name</b></label><br>
+		<input type="text" placeholder="Enter your name" name="student name"required><br><br>
+		<label><b>CNIC NO.</b></label><br>
+		<input type="number" placeholder="_ _ _ _ _-_ _ _ _-_" name="CNIC" required><br><br>
+		<label><b>Date Of Birth</b></label><br>
+		<input type="date" name="DOB"><br><br>
+		<label><b>E-mail Address</b></label><br>
+		<input  type="email" name="email" placeholder="Email"><br><br>
+		<label><b>Password</b></label><br>
+		<input type="password" name="password" placeholder="Type Password here"><br><br>
+
+
+
+	</div>   <!-- div-1 close -->
+
+
+
+	<div>
+
+		<label><b>Phone No.</b></label><br>
+		<input type="number" name="phno." placeholder="Enter your Phone no." required><br><br>
+
+		<label><b>Your Age</b></label><br> 
+		<input type="number" name="age" placeholder="Your Age  " min="18" max="30" required  style="padding: 0% 2%;"><br><br>
+
+
+		<label ><b>Address</b></label><br>
+		<input type="text area" placeholder="Enter Your Address" name="address" style="padding: 3.5%; margin-left: 3%;"><br><br>
+		
+		<label><b>Gender</b></label><br>
+		<input type="radio" name="Gender" value="M"><span>Male</span>
+		<input type="radio" name="Gender" value="F"><span>Female</span>
+		<input type="radio" name="Gender" value="O"><span>Other</span><br><br>
+
+		<label><b>Domicile</b></label><br>
+		<select name="city">
+			<option value="F">Faisalabad</option>
+			<option value="M">Multan</option>
+			<option value="L">Lahore</option>
+			<option value="G">Gujrawala</option>
+			<option value="S">Sahiwal</option>
+			<option value="Sa">Sargodha</option>
+		</select><br><br>
+
+		<button>Sumbit</button>
+
+		
+
+	</div>     <!-- div-2 close -->
+	
+</div>   <!-- p-div close -->
+
+<div class="footer">
 			<div>
 				<ul>
 					<li><h1>About Us</h1></li>
@@ -163,7 +215,5 @@
 
 
 
-	 	
-	
-	</body>
-	</html>
+</body>
+</html>
