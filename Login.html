@@ -9,26 +9,29 @@
 	<style>
 		
 		:root{--bgcolor: rgb(0,200,0);}
-		
-		.nav{width: 100%; height: 10%;display: flex;background-color: var(--bgcolor);}
+		.wrapper{width: 100%; height: 100%; overflow: hidden;}
+		.nav{width: 100%; height: 10vh;display: flex;background-color: var(--bgcolor);}
 		.nav > div:nth-child(1){width: 80%; height: 100%;}
 		.nav > div:nth-child(1) >ul{display: flex; list-style: none;}
 		.nav > div:nth-child(1) >ul>li:nth-child(2){padding-left: 2%;}
 		.nav > div:nth-child(2){width: 20%; height: 100%; }
 		.nav > div:nth-child(2) >ul{ display: flex;list-style: none; }
 		.nav > div:nth-child(2) >ul >li {padding-left: 5%;}
-		.nav > div:nth-child(2) >ul>li hr{transform: rotate(90degree);height: 100%;width: 1px;background-color: black;bottom: 0;top: 0;}
+		.nav > div:nth-child(2) >ul >li:hover {color: blue; }
 		.nav > div:nth-child(2) >ul >li >a  {/*padding-left: 5%;*/ text-decoration: none; color: black;}
+		/*.nav > div:nth-child(2) >ul>li hr{transform: rotate(90degree);height: 100%;width: 1px;background-color: black;bottom: 0;top: 0;}*/
 		.btn1 {display: none;}
-
 		.bottom-nav {display: flex; width: 100%; height: 50%;}
-
 		.bottom-nav > div:nth-child(1){width: 45%; height: 100%;}
 		.bottom-nav > div:nth-child(1) >img{padding: 2% 6%;}
-		.bottom-nav > div:nth-child(2){width: 55%; height: 100%;}
-		.bottom-nav > div:nth-child(2) >ul{display: flex;list-style: none;}
-		.bottom-nav > div:nth-child(2) >ul >li{padding-left: 2%; margin-left: 2%;}
-		.bottom-nav > div:nth-child(2) >ul >li >a {text-decoration: none; color:black;}
+		.bottom-nav2{width: 55%; height: 100%;}
+		.bottom-nav2 >ul{display: flex;list-style: none;}
+		.bottom-nav2 >ul >li{padding-left: 2%; position: relative;}
+		.bottom-nav2 >ul >li >a {text-decoration: none; color:black;}
+		.bottom-nav2 >ul > li > ul {display: none;} 
+		.bottom-nav2 >ul > li:hover ul {display: flex; flex-direction: column; list-style: none; position: absolute; border: solid; margin: 0; padding: 0; width: 100%;z-index: 1;}
+
+		/*.bottom-nav2 >ul > li:nth-child(3) :hover  ul {color: red; z-index: 1;}*/
 		.btn2{display: none;}
 
 		/*styling of navbar end here*/
@@ -56,7 +59,6 @@
 			.btn2{display: block; float: right;margin: 5% 2%;}
 			.btn2 :hover { border-color: red; }
 			
-
 			
 			.hero > div:nth-child(2) {width: 40%; height: 50vh; border-radius: 10px; border: solid; margin: 10%; color: white; font-size: 20px;}
 
@@ -163,7 +165,7 @@
 					<li><a href="Home.html">HOME</a></li>
 					<li><a href="About.html">ABOUT</a></li>
 					<li><a href="Pages.html">PAGES</a></li>
-					<li><a href="Terms and condition">Term & Condition</a></li>
+					<li><a href="Terms and condition.html">Term & Condition</a></li>
 				</ul>
 			</div>    <!-- footer div-2 end -->
 			<div>
