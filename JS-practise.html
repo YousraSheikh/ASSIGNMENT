@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practiss</title>
+</head>
+<body>
+	<script type="text/javascript">
+		a = prompt("Enter a");
+		a = parseInt(a);
+		b = prompt("Enter b");
+		b = parseInt(b);
+		function fun(a,b){
+			alert(a+b);
+		}
+		function sub(a,b){
+			alert(a-b);
+		}
+		function mult(a,b){
+			alert(a*b);
+		}
+		function disp(a){
+			document.write(a);
+		}
+		console.log(a);
+		console.log(typeof a);
+	</script>
+	<button onclick="fun(a,b)">on Click</button><br><br>
+	<button onmouseover="sub(a,b)">on click over</button><br><br>
+	<button onmouseout="mult(a,b)">click mouse out</button><br><br>
+	<button onload="disp(a,b)">onload click</button><span>not working</span><br><br>
+	<button onchange="add(a,b)">On change</button><span>not working</span><br><br>
+</body>
+</html>
